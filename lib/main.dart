@@ -30,44 +30,111 @@ class MyApp extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       width: 100,
                       height: 100,
-                      color: Colors.green,
+                      color: Colors.white,
+                      child: Image.asset(
+                        'images/rent.png',
+                        fit: BoxFit.contain,
+                      ),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 40,
                     ),
+                    Expanded(
+                      child: Container(
+                        width: 250,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.home_work_outlined,
+                                    size: 50,
+                                    color: Colors.lightGreen,
+                                  ),
+                                  Text(
+                                    '賃貸物件',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ]),
+                            Text(
+                              'マンション・アパート・一戸建て',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
                     Container(
-                      width: 250,
+                      width: 100,
                       height: 100,
                       color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.home_work_outlined,
-                                  size: 50,
-                                  color: Colors.lightGreen,
-                                ),
-                                Text(
-                                  '賃貸物件',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ]),
-                          Text(
-                            'マンション・アパート・一戸建て',
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      child: Image.asset(
+                        'images/buy.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.apartment,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '新築マンション',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.apartment,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '中古マンション',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -76,56 +143,162 @@ class MyApp extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.apartment,
-                            color: Colors.lightGreen,
-                            size: 50,
-                          ),
-                          Text(
-                            '新築マンション',
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.map_outlined,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '土地',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.blue,
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.apartment,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '新築一戸建て',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.home,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              ' 中古一戸建て',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),
                 SizedBox(height: 10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.red,
+                    Expanded(
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        color: Colors.white,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.change_circle_outlined,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '「買う」をまとめて検索',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.green,
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.houseboat,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              '注文住宅',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.blue,
+                    SizedBox(
+                      width: 25,
                     ),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.handyman_outlined,
+                              color: Colors.lightGreen,
+                              size: 50,
+                            ),
+                            Text(
+                              'リフォーム',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Image.network(
+                          'https://tokyo-chara.com/tcf-webzine/wp-content/uploads/2021/06/201806_sumomi.png'),
+                    )
                   ],
                 ),
               ],
