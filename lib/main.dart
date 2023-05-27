@@ -23,70 +23,114 @@ class MyApp extends StatelessWidget {
                 Icon(Icons.menu), //onPressed: () {},をどうやって入れる？
               ],
             )),
-        body: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: Container(
+          color: Colors.grey,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
               children: [
-                Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.green,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.green,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      width: 250,
+                      height: 100,
+                      color: Colors.white,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.home_work_outlined,
+                                  size: 50,
+                                  color: Colors.lightGreen,
+                                ),
+                                Text(
+                                  '賃貸物件',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ]),
+                          Text(
+                            'マンション・アパート・一戸建て',
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  color: Colors.lightBlueAccent,
-                  child: Column(
-                    children: [
-                      Row(children: [
-                        Icon(Icons.house_outlined),
-                        Text('賃貸物件'),
-                      ]),
-                      Text('マンション・アパート・一戸建て'),
-                    ],
-                  ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.white,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.apartment,
+                            color: Colors.lightGreen,
+                            size: 50,
+                          ),
+                          Text(
+                            '新築マンション',
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.blue,
+                    ),
+                  ],
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.blue,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Container(
-                  width: 100,
-                  height: 200,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 100,
-                  height: 200,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 100,
-                  height: 200,
-                  color: Colors.blue,
-                ),
-              ],
-            ),
-          ],
+          ),
         ),
       ),
     );
